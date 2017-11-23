@@ -23,6 +23,7 @@ install_requires = ['aiohttp',
                     'ujson',
                     'trafaret-config',
                     'pytz',
+                    'aiohttp_jinja2',
                     'uvloop'
                     ]
 

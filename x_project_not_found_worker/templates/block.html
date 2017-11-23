@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-5703702-11', 'auto');
+ga('require', 'outboundLinkTracker', {events: ['click', 'auxclick', 'contextmenu']});
+ga('require', 'outboundFormTracker');
+ga('require', 'urlChangeTracker', {fieldsObj: {dimension1: 'virtual', dimension2: '{{ req_type }}', dimension3: '{{ ip }}'}});
+ga('send', 'pageview', {dimension1: 'page load', dimension2: '{{ req_type }}', dimension3: '{{ ip }}'});
+</script>
+<script async defer src='https://cdn.yottos.com/analytics.js'></script>
+<script async defer src="https://cdn.yottos.com/autotrack.js"></script>
+</head>
+<body>
+<div id="foo"></div>
+</body>
+</html>
