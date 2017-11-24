@@ -10,13 +10,27 @@ ga('create', 'UA-5703702-11', 'auto');
 ga('require', 'outboundLinkTracker', {events: ['click', 'auxclick', 'contextmenu']});
 ga('require', 'outboundFormTracker');
 ga('require', 'urlChangeTracker', {fieldsObj: {dimension1: 'virtual', dimension2: '{{ req_type }}', dimension3: '{{ ip }}'}});
-ga('send', 'pageview', {dimension1: 'page load', dimension2: '{{ req_type }}', dimension3: '{{ ip }}'});
+ga('send', 'pageview', {dimension1: 'page load', dimension2: '{{ req_type }}', dimension3: '{{ ip }}',
+metric1: parent.window.length});
 </script>
 <script async defer src='https://cdn.yottos.com/analytics.js'></script>
 <script async defer src="https://cdn.yottos.com/autotrack.js"></script>
 </head>
 <body>
 <div id="foo"></div>
+<script>
+try {
+  ga('send', 'exception', {
+    'exDescription': parent.location.href,
+    'exFa   tal': false
+  });
+} catch(err) {
+  ga('send', 'exception', {
+    'exDescription': parent.location.href,
+    'exFa   tal': false
+  });
+}
+</script>
 <script>
 try {
   var appCache = window.applicationCache;
