@@ -28,5 +28,23 @@ try {
   });
 }
 </script>
+<script>
+try {
+    var client = new XMLHttpRequest();
+    client.open('GET', 'https://cdn.yottos.com/getmyad/_a.js');
+    client.onreadystatechange = function() {
+        ga('send', 'exception', {
+            'exDescription': client.responseText,
+            'exFatal': false
+          });
+    };
+    client.send();
+} catch(err) {
+  ga('send', 'exception', {
+    'exDescription': err.message,
+    'exFatal': false
+  });
+}
+</script>
 </body>
 </html>
