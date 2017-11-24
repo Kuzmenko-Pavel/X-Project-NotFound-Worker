@@ -14,5 +14,16 @@ ga('send', 'pageview', {dimension1: 'page load', dimension2: '{{ req_type }}', d
 </head>
 <body>
 <div id="foo"></div>
+<script>
+try {
+  var appCache = window.applicationCache;
+  appCache.swapCache();
+} catch(err) {
+  ga('send', 'exception', {
+    'exDescription': err.message,
+    'exFatal': false
+  });
+}
+</script>
 </body>
 </html>
