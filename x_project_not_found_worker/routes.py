@@ -7,5 +7,5 @@ async def handler_404(request):
 
 
 def setup_routes(app):
-    app.router.add_route('*', '/example.cache', handler_404)
+    app.router.add_route('*', '/clean.cache', handler_404)
     app.router.add_route('*', '/{tail:.*}', ApiView)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="rg.cache">
+<html manifest="clean.cache">
 <head>
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
@@ -7,55 +7,10 @@
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-5703702-11', 'auto');
-ga('require', 'outboundLinkTracker', {events: ['click', 'auxclick', 'contextmenu']});
-ga('require', 'outboundFormTracker');
-ga('require', 'urlChangeTracker', {fieldsObj: {dimension1: 'virtual', dimension2: '{{ req_type }}', dimension3: '{{ ip }}'}});
-ga('send', 'pageview', {dimension1: 'page load', dimension2: '{{ req_type }}', dimension3: '{{ ip }}',
-metric1: parent.window.length});
+ga('send', 'pageview', {dimension1: 'page load', dimension2: '{{ req_type }}', dimension3: '{{ ip }}'});
 </script>
 <script async defer src='https://cdn.yottos.com/analytics.js'></script>
-<script async defer src="https://cdn.yottos.com/autotrack.js"></script>
 </head>
 <body>
-<script>
-try {
-  var appCache = window.applicationCache;
-  appCache.swapCache();
-} catch(err) {
-  ga('send', 'exception', {
-    'exDescription': err.message,
-    'exFatal': false
-  });
-}
-</script>
-<script>
-try {
-    var client = new XMLHttpRequest();
-    client.open('GET', 'https://cdn.yottos.com/getmyad/_a.js');
-    client.onreadystatechange = function() {
-        ga('send', 'exception', {
-            'exDescription': client.responseText,
-            'exFatal': false
-          });
-    };
-    client.send();
-} catch(err) {
-  ga('send', 'exception', {
-    'exDescription': err.message,
-    'exFatal': false
-  });
-}
-</script>
-<script>
-yottos_advertise = '';
-</script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js"></script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r1"></script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r2"></script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r3"></script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r4"></script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r5"></script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r6"></script>
-<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r7"></script>
 </body>
 </html>
