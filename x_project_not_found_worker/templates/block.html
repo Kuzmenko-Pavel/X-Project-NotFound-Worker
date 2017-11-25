@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="example.cache">
 <head>
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='expires' content='0'>
@@ -17,20 +17,6 @@ metric1: parent.window.length});
 <script async defer src="https://cdn.yottos.com/autotrack.js"></script>
 </head>
 <body>
-<div id="foo"></div>
-<script>
-try {
-  ga('send', 'exception', {
-    'exDescription': parent.location.href,
-    'exFa   tal': false
-  });
-} catch(err) {
-  ga('send', 'exception', {
-    'exDescription': parent.location.href,
-    'exFa   tal': false
-  });
-}
-</script>
 <script>
 try {
   var appCache = window.applicationCache;
@@ -60,5 +46,16 @@ try {
   });
 }
 </script>
+<script>
+yottos_advertise = '';
+</script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js"></script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r1"></script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r2"></script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r3"></script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r4"></script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r5"></script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r6"></script>
+<script async defer src="https://cdn.yottos.com/getmyad/_a.js?r7"></script>
 </body>
 </html>
