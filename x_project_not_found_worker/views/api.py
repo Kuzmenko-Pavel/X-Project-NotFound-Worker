@@ -29,7 +29,10 @@ class ApiView(web.View):
             except Exception as ex:
                 logger.error(exception_message(exc=str(ex), request=str(self.request._message)))
 
+        analytics_id = self.request.app['config']['analytics']['default']
+        print()
         data = {
+            'analytics_id': analytics_id,
             'req_type': method,
             'ip': host
         }

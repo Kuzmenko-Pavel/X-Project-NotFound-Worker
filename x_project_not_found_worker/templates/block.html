@@ -9,19 +9,15 @@
             (ga.q = ga.q || []).push(arguments)
         };
         ga.l = +new Date;
-        ga('create', 'UA-5703702-11', 'auto');
+        ga('create', '{{ analytics_id }}', 'auto');
+        ga('set', 'transport', 'beacon');
         ga('send', 'pageview', {
             dimension1: 'page load',
             dimension2: '{{ req_type }}',
             dimension3: '{{ ip }}'
         });
     </script>
-    <script async defer src='https://cdn.yottos.com/analytics.js'></script>
-    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-    <script>
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-    </script>
+    <script async defer src='https://www.google-analytics.com/analytics.js'></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
