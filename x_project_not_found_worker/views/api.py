@@ -30,7 +30,11 @@ class ApiView(web.View):
                 logger.error(exception_message(exc=str(ex), request=str(self.request._message)))
 
         analytics_id = self.request.app['config']['analytics']['default']
-        print()
+        status = self.request.headers.get('Status', 200)
+        if status == '404':
+            analytics_id = self.request.app['config']['analytics'][404]
+        elif status == '500':
+            analytics_id = self.request.app['config']['analytics'][500]
         data = {
             'analytics_id': analytics_id,
             'req_type': method,
